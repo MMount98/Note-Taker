@@ -1,7 +1,10 @@
-// const express = require("exprss");
+const express = require("express");
 
 // //Import custom modular routers
+const getNotesRouter = require("./getNotes");
 
-// const app = express();
+const app = express();
 
-// module.exports = app;
+app.use("/notes", getNotesRouter);
+
+module.exports = app;
