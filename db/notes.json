@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Test Note",
+        "text": "This note is being stored in a database file",
+        "id": "c209146e-a74b-4ed0-989f-d9b024972ba2"
+    },
+    {
+        "title": "Set up Meeting Room",
+        "text": "Set up meeting in room 304",
+        "id": "45aaccd9-4b6a-4144-aedf-49bac19fcc80"
+    },
+    {
+        "title": "Call in Rezervation",
+        "text": "Call in a 6pm dinner rez at The cork",
+        "id": "73779470-b3e3-4de0-bd91-6a5eac5f8ee5"
+    }
+]
