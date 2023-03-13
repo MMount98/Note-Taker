@@ -6,6 +6,11 @@
 
 This web appliction was built using express.js and desgained to be a simple note taking web application. You can create detailed notes and save them on a database to revisit later.
 
+This site is deployed using the hosting service, [Heroku](https://www.heroku.com/)
+
+
+Link to the: [Live Site](https://tranquil-retreat-10835.herokuapp.com/notes)
+
 # Table of Contents
 
 [Description](#description)
