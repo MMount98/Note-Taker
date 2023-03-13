@@ -1,3 +1,4 @@
+//MODULES
 const notes = require("express").Router();
 const { v4: uuidv4 } = require("uuid");
 const {
@@ -6,6 +7,9 @@ const {
   writeToFile,
 } = require("../helpers/fsUtils.js");
 
+//ROUTES
+
+//GET
 notes.get("/", (req, res) => {
   readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
 });
@@ -22,6 +26,7 @@ notes.get("/:note_id", (req, res) => {
     });
 });
 
+//POST
 notes.post("/", (req, res) => {
   const { title, text } = req.body;
 
@@ -39,6 +44,8 @@ notes.post("/", (req, res) => {
   }
 });
 
+
+//DELETE
 notes.delete("/:note_id", (req, res) => {
   const noteId = req.params.note_id;
   console.log(noteId);
@@ -53,4 +60,6 @@ notes.delete("/:note_id", (req, res) => {
     });
 });
 
+
+//EXPROTS
 module.exports = notes;
