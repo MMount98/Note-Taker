@@ -25,13 +25,29 @@ notes.get("/:note_id", (req, res) => {
 notes.post("/", (req, res) => {
   const { title, text } = req.body;
 
-  const newNote = {
-    title,
-    text,
-    id: uuidv4(),
-  };
+  if (req.body) {
+    const newNote = {
+      title,
+      text,
+      id: uuidv4(),
+    };
 
-  readAndAppend(newNote, "./db/db.json");
+    readAndAppend(newNote, "./db/db.json");
+    res.json(`Added '${newNote.title}' to Data Base!`);
+  } else {
+    res.error(`Issue adding '${newNote.title}' to Data Base!`);
+  }
 });
 
+// notes.delete("/:note_id", (req, res) => {
+//   const noteId = req.params.note_id;
+//   console.log(noteId);
+//   readFromFile("./db/db.json")
+//     .then((data) => JSON.parse(data))
+//     .then((notes) => {
+//       const getNote = notes.filter((note) => note.note_id !== noteId);
+
+//       console.log(getNote);
+//     });
+// });
 module.exports = notes;
