@@ -44,7 +44,7 @@ Once you've completed the install instructions:
 
 ## The note taking page visual:
 
-![what the note page whould apper as](./Assets/Images/11-express-homework-demo-01.png)
+![what the note page whould apper as](./public/assets/images/note-take.png)
 
 <a name="contribute"></a>
 

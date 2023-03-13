@@ -20,5 +20,9 @@ app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
 
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/404.html"));
+});
+
 //TURN ON SERVER
 app.listen(PORT, () => console.log(`App listening on 3001`));
