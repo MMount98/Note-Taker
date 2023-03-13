@@ -39,15 +39,18 @@ notes.post("/", (req, res) => {
   }
 });
 
-// notes.delete("/:note_id", (req, res) => {
-//   const noteId = req.params.note_id;
-//   console.log(noteId);
-//   readFromFile("./db/db.json")
-//     .then((data) => JSON.parse(data))
-//     .then((notes) => {
-//       const getNote = notes.filter((note) => note.note_id !== noteId);
+notes.delete("/:note_id", (req, res) => {
+  const noteId = req.params.note_id;
+  console.log(noteId);
+  readFromFile("./db/db.json")
+    .then((data) => JSON.parse(data))
+    .then((notes) => {
+      const newDb = notes.filter((notes) => notes.id !== noteId);
 
-//       console.log(getNote);
-//     });
-// });
+      writeToFile("./db/db.json", newDb);
+
+      res.json(`Note: Deleted`);
+    });
+});
+
 module.exports = notes;
