@@ -9,7 +9,7 @@ This web appliction was built using express.js and desgained to be a simple note
 This site is deployed using the hosting service, [Heroku](https://www.heroku.com/)
 
 
-Link to the: [Live Site](https://tranquil-retreat-10835.herokuapp.com/notes)
+Link to the: [Live Site](https://tranquil-retreat-10835.herokuapp.com/)
 
 # Table of Contents
 
